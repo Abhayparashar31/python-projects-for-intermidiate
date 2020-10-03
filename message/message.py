@@ -5,9 +5,10 @@ from tkinter.messagebox import showinfo, showerror
 
 
 def send_sms(number, message):
+    ## if you are using some other sms bulk service just paste the whole python code here and the place where number and message is inset replace it with number and message.
     url = 'https://www.fast2sms.com/dev/bulk'
     params = {
-        'authorization': 'qyF9TZHwdugA6s4arSiXtKUV1ICoOJ8LQvYbMh5mfNjl30n7Wz6vAzxr8uTb0oqSOCmVcMQFLPU4lHJj',
+        'authorization': 'YOUR_AUTHENTICATION_KEY',
         'sender_id': 'FSTSMS',
         'message': message,
         'language': 'english',
@@ -33,7 +34,7 @@ def btn_click():
 # Creating GUI
 root = Tk()
 root.title("Message Sender ")
-photo = PhotoImage(file = "C:\\Users\\abhay\\Desktop\\ChatBot\\engine\\profile.png")
+photo = PhotoImage(file = "C:\\Users\\abhay\\Desktop\\ChatBot\\engine\\profile.png") ## YOur icon path
 root.iconphoto(False, photo)
 root.geometry("400x350")
 font = ("Helvetica", 22, "bold")
